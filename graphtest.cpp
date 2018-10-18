@@ -116,7 +116,14 @@ public:
     }
 };
 int main(int argc, char **argv) {
-	Gtk::Main kit( argc, argv );
+	// Gtk::Main kit( argc, argv );
+	int argc2 = 1;
+	char *argv2[] = {
+		strdup("cygraph"),
+		strdup("")
+	};
+	char **argv3 = argv2;
+	Gtk::Main kit( argc2, argv3 );
     MainWin mainwin;
 	mainwin.resize(800, 600);
     Gtk::Main::run( mainwin );

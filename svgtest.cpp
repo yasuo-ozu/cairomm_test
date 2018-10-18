@@ -47,6 +47,11 @@ int main()
     cr->stroke();
     cr->restore();
 
+	cr->move_to(100, 0);
+	cr->set_line_width(100);
+	cr->line_to(100, 100);
+	cr->stroke();
+
     cr->show_page();
 
     std::cout << "Wrote SVG file \"" << filename << "\"" << std::endl;
